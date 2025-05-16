@@ -22,3 +22,22 @@ This website features include -
 13. Also user can change login password from settings.
 14. Its mobile responsive with modern design + fade in animation on pages.
 And much more.
+
+---
+# Starting up the project
+## Start Up the frontend server
+``` bash
+npm install
+npm run dev
+```
+## Start Up the backend server
+Change the directory to the server
+``` bash
+npm install
+```
+---
+# 1. Navbar
+Link: https://youtu.be/J7BGuuuvDDk?si=7BXToFGabEzxw9Yy&t=1446
+
+## Notes:
+- You need to wrap the app in a Browser Router to be able to use Link tags that lets you click on a link without reloading the page
