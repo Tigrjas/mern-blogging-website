@@ -87,3 +87,11 @@ const Navbar = () => {
 export default Navbar
 ```
 I hide the content in the nav tags, but you can see the `Outlet` import as well as where `Outlet` tag is placed for any content to follow to be placed.
+
+---
+# 3.User Auth Form
+Link: https://youtu.be/J7BGuuuvDDk?si=xrCO6rAJMlS58E_b&t=3730
+
+---
+# 4. Page Animation
+Link: https://youtu.be/J7BGuuuvDDk?si=4jZ9UK9RAkguRbhc&t=5870
