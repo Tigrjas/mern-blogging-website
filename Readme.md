@@ -41,3 +41,49 @@ Link: https://youtu.be/J7BGuuuvDDk?si=7BXToFGabEzxw9Yy&t=1446
 
 ## Notes:
 - You need to wrap the app in a Browser Router to be able to use Link tags that lets you click on a link without reloading the page
+
+--
+# 2. Routes
+Link: https://youtu.be/J7BGuuuvDDk?si=JYbhqaRloah9NZGP&t=3287
+
+In App.jsx you have to import to be able to create seperate routes
+``` jsx
+import { Route, Routes } from "react-router-dom";
+
+const App = () => {
+    return (
+        <Routes>
+            <Route path="/" element={<Navbar />}>
+                <Route path="signin" element={<h1>Sign in page</h1>}/>
+                <Route path="signup" element={<h1>Sign up page</h1>}/>
+            </Route>
+        </Routes>
+    )
+}
+```
+In this example you can see that we use the Routes and the Route tag to create multiple routes. Here we want to have the Navbar on each page while also rendering the signin and signup page, but its tricky in react. You need to Use the Outlet in the react component.
+
+Navbar Component
+``` jsx
+import { useState } from "react"
+import logo from "../imgs/logo.png"
+import { Link, Outlet } from "react-router-dom"
+
+const Navbar = () => {
+
+    const [ searchBoxVisibility, setSearchBoxVisibility] = useState(false)
+
+
+    return (
+        <>
+            <nav className="navbar">
+            </nav>
+
+            <Outlet/>
+        </>
+    )
+}
+
+export default Navbar
+```
+I hide the content in the nav tags, but you can see the `Outlet` import as well as where `Outlet` tag is placed for any content to follow to be placed.
